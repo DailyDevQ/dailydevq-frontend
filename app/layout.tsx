@@ -73,9 +73,9 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
-        <div className="fixed inset-0 z-0 bg-black">
+        <div className="fixed inset-0 z-0 bg-gray-900">
           <Plasma
-            color="#8b5cf6"
+            color="#000000"
             speed={0.8}
             direction="forward"
             scale={1.5}

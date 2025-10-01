@@ -1,0 +1,22 @@
+# 개발용 Next.js Dockerfile
+FROM node:20-alpine
+
+# pnpm 설치
+RUN corepack enable && corepack prepare pnpm@latest --activate
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+# 패키지 파일 복사
+COPY package.json pnpm-lock.yaml* ./
+
+# 의존성 설치 (개발 환경이므로 lockfile 업데이트 허용)
+RUN pnpm install --no-frozen-lockfile
+
+# 애플리케이션 코드는 볼륨 마운트로 처리
+
+# 포트 노출
+EXPOSE 3000
+
+# 개발 서버 실행
+CMD ["pnpm", "dev"]
