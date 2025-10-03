@@ -306,3 +306,40 @@ a[href*="v0.dev"] *,
 .rotating-border-fast {
   animation: rotate-border 2s linear infinite;
 }
+
+/* Tech logos infinite scroll animation */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-logos-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll {
+  animation: scroll-logos 40s linear infinite;
+}
+
+.animate-scroll-reverse {
+  animation: scroll-logos-reverse 50s linear infinite;
+}
+
+.animate-scroll-fast {
+  animation: scroll-logos 30s linear infinite;
+}
+
+.animate-scroll:hover,
+.animate-scroll-reverse:hover,
+.animate-scroll-fast:hover {
+  animation-play-state: paused;
+}

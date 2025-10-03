@@ -25,11 +25,11 @@ export function Hero() {
           <h1 className="mt-4 text-center text-4xl font-extrabold tracking-tight sm:text-5xl md:text-7xl max-w-5xl">
             <span className="block">매일 아침,</span>
             <span className="block text-lime-300 drop-shadow-[0_0_20px_rgba(132,204,22,0.35)] mt-2">개발자를 위한</span>
-            <span className="block mt-2">5분 테크 뉴스레터</span>
+            <span className="block mt-2">5분 테크레터</span>
           </h1>
 
           <p className="mt-8 text-center text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed">
-            최신 트렌드부터 실무 꿀팁까지, 딱 필요한 것만 빠르게
+            최신 트렌드부터 실무 팁까지, 딱 필요한 것만 빠르게
           </p>
 
           {/* 이메일 구독 폼 - 리퀴드 글래스 스타일 */}
@@ -56,7 +56,7 @@ export function Hero() {
                   onChange={(e) => setEmail(e.target.value)}
                   onFocus={() => setIsFocused(true)}
                   onBlur={() => setIsFocused(false)}
-                  placeholder="your-email@example.com"
+                  placeholder="이메일을 입력해주세요"
                   required
                   className="
                     flex-1 bg-transparent px-6 py-3 text-white text-base
@@ -80,14 +80,14 @@ export function Hero() {
                   "
                   data-event="subscribe_submit"
                 >
-                  매일 9시에 보내주세요
+                  구독하기
                 </Button>
               </div>
             </div>
 
             {/* 안내 문구 */}
             <p className="mt-4 text-center text-sm text-gray-400">
-              언제든 해지 가능 · 광고 없음
+              📬 월~금 오전 9시, 메일함으로 배달됩니다
             </p>
           </form>
 
@@ -117,18 +117,18 @@ export function Hero() {
 
 const stats = [
   {
-    number: "평일 매일",
-    label: "꾸준한 발송",
-    desc: "월~금 오전 9시, 빠짐없이",
+    number: "매일 아침 9시",
+    label: "정기 발송",
+    desc: "월요일부터 금요일까지 꾸준히",
   },
   {
-    number: "5분 독서",
-    label: "가볍게 읽는",
-    desc: "출근길에도 부담 없이",
+    number: "5분 분량",
+    label: "핵심 위주",
+    desc: "출근길 지하철에서 읽기 좋은 길이",
   },
   {
-    number: "완전 무료",
-    label: "영구 무료",
-    desc: "광고도 없고, 결제도 없어요",
+    number: "무료 제공",
+    label: "별도 비용 없음",
+    desc: "가입만 하면 바로 받아볼 수 있습니다",
   },
 ]

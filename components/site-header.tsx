@@ -9,10 +9,8 @@ import { Menu, Briefcase, Tag, HelpCircle, FileText, Info } from "lucide-react"
 export function SiteHeader() {
   const links = [
     { href: "/", label: "Home", icon: Briefcase },
-    { href: "#pricing", label: "Pricing", icon: Tag },
-    { href: "faq", label: "FAQ", icon: HelpCircle },
-    { href: "#blog", label: "Blog", icon: FileText },
     { href: "About", label: "About", icon: Info },
+    { href: "faq", label: "FAQ", icon: HelpCircle },
   ]
 
   return (
@@ -52,7 +50,7 @@ export function SiteHeader() {
                          hover:bg-lime-300 hover:shadow-md hover:scale-[1.02]
                          transition-all"
             >
-              <Link href="#contact">Chat With Us</Link>
+              <Link href="#contact">회원가입</Link>
             </Button>
           </div>
 

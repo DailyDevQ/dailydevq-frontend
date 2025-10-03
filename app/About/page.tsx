@@ -31,14 +31,14 @@ export default function AboutPage() {
         <section className="relative py-20 px-6 md:px-12 lg:px-20 text-center">
           <div className="container mx-auto max-w-4xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              꾸준함이 만드는
+              매일 아침 9시,
               <br />
-              <span className="text-lime-300">기술 면접 합격</span>
+              <span className="text-lime-300">개발자의 하루를 여는 5분</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              DailyDevQ는 바쁜 개발자를 위한 마이크로 러닝 플랫폼입니다.
+              최신 기술 트렌드부터 실무 노하우까지,
               <br />
-              매일 아침 5분, 한 가지 개념만 확실하게.
+              딱 필요한 내용만 골라서 메일함으로 보내드려요.
             </p>
           </div>
         </section>
@@ -47,16 +47,16 @@ export default function AboutPage() {
         <section className="py-16 px-6 md:px-12 lg:px-20">
           <div className="container mx-auto max-w-5xl">
             <div className="liquid-glass rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl font-bold mb-6 text-lime-300">우리의 미션</h2>
+              <h2 className="text-3xl font-bold mb-6 text-lime-300">왜 DailyDevQ인가요?</h2>
               <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                면접 준비는 멀리 있지 않습니다. 출근길 지하철, 점심시간, 퇴근 후 침대에서.
+                기술은 매일 쏟아지는데, 시간은 늘 부족하죠.
                 <br />
-                하루 단 5분이면 충분합니다.
+                출근길 지하철에서, 점심시간에, 잠들기 전 침대에서. 딱 5분만 투자해보세요.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                우리는 개발자가 부담 없이, 꾸준히 성장할 수 있도록 매일 한 가지 핵심 개념을
+                우리는 개발자가 부담 없이 꾸준히 성장할 수 있도록
                 <br />
-                3문장 요약, 실무 코드, 1문항 퀵퀴즈로 전달합니다.
+                매일 한 가지 핵심 개념을 쉽게 풀어서 보내드립니다.
               </p>
             </div>
           </div>
@@ -65,38 +65,38 @@ export default function AboutPage() {
         {/* Features Grid */}
         <section className="py-16 px-6 md:px-12 lg:px-20">
           <div className="container mx-auto max-w-5xl">
-            <h2 className="text-3xl font-bold mb-12 text-center">왜 DailyDevQ인가요?</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">DailyDevQ의 특별한 점</h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   icon: "⚡",
-                  title: "5분이면 충분",
-                  desc: "긴 강의도, 두꺼운 책도 필요 없습니다. 핵심만 빠르게 흡수하세요.",
+                  title: "딱 5분이면 돼요",
+                  desc: "긴 강의나 두꺼운 책 없이도 핵심 내용만 빠르게 배울 수 있어요.",
                 },
                 {
                   icon: "🎯",
-                  title: "실무 중심",
-                  desc: "이론만 나열하지 않습니다. 실제 코드와 사용 사례를 함께 제공합니다.",
+                  title: "실무에 바로 써먹는",
+                  desc: "이론만 늘어놓지 않아요. 실제 코드와 사례를 함께 드립니다.",
                 },
                 {
                   icon: "📅",
-                  title: "매일 한 걸음",
-                  desc: "365일, 하루도 빠짐없이. 꾸준함이 실력이 됩니다.",
+                  title: "매일 꾸준하게",
+                  desc: "평일 오전 9시, 빠짐없이. 작은 습관이 큰 실력이 돼요.",
                 },
                 {
                   icon: "🧠",
-                  title: "AI 기반 생성",
-                  desc: "최신 기술 트렌드를 반영한 질문을 AI가 매일 생성합니다.",
+                  title: "AI가 직접 작성",
+                  desc: "최신 기술 트렌드를 반영해 AI가 매일 새로운 내용을 만들어요.",
                 },
                 {
                   icon: "✅",
-                  title: "퀵퀴즈",
-                  desc: "배운 내용을 즉시 확인. 단순 암기가 아닌 이해를 목표로 합니다.",
+                  title: "즉시 확인하는 퀴즈",
+                  desc: "읽고 끝이 아니에요. 퀴즈로 제대로 이해했는지 바로 확인해요.",
                 },
                 {
                   icon: "💯",
-                  title: "100% 무료",
-                  desc: "광고 없이, 영구 무료. 개발자 커뮤니티를 위한 선물입니다.",
+                  title: "완전 무료",
+                  desc: "광고도 없고, 결제도 없어요. 개발자 커뮤니티를 위한 선물이에요.",
                 },
               ].map((feature, index) => (
                 <div
@@ -120,31 +120,31 @@ export default function AboutPage() {
               <div className="space-y-6 text-left">
                 <div className="liquid-glass p-6 rounded-xl">
                   <h3 className="text-xl font-bold text-lime-300 mb-3">
-                    1. 작은 습관이 큰 변화를 만든다
+                    1. 작은 습관이 큰 변화를 만들어요
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    하루 5분, 365일이면 1,825분. 30시간이 넘는 학습 시간입니다.
-                    작지만 꾸준한 투자가 면접 합격의 비결입니다.
+                    하루 5분, 1년이면 30시간이 넘는 학습 시간이에요.
+                    작지만 꾸준한 투자가 실력 향상의 비결입니다.
                   </p>
                 </div>
 
                 <div className="liquid-glass p-6 rounded-xl">
                   <h3 className="text-xl font-bold text-lime-300 mb-3">
-                    2. 실무가 가장 좋은 선생님이다
+                    2. 실무가 가장 좋은 선생님
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    이론만 아는 것과 실제로 쓸 수 있는 것은 다릅니다.
-                    모든 캡슐에는 실무에서 바로 쓸 수 있는 코드 예시가 포함됩니다.
+                    이론만 아는 것과 실제로 쓸 수 있는 건 다르죠.
+                    모든 내용에는 실무에서 바로 써먹을 수 있는 코드 예시가 들어있어요.
                   </p>
                 </div>
 
                 <div className="liquid-glass p-6 rounded-xl">
                   <h3 className="text-xl font-bold text-lime-300 mb-3">
-                    3. 지식은 공유될 때 더 가치있다
+                    3. 지식은 나눌 때 더 가치있어요
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    우리는 개발자 커뮤니티가 함께 성장하기를 바랍니다.
-                    그래서 DailyDevQ는 영구 무료입니다.
+                    개발자 커뮤니티가 함께 성장하길 바라는 마음으로
+                    DailyDevQ는 영구 무료로 운영됩니다.
                   </p>
                 </div>
               </div>
@@ -156,10 +156,10 @@ export default function AboutPage() {
         <section className="py-20 text-center px-6">
           <div className="container mx-auto max-w-3xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              오늘부터 시작하세요
+              내일 아침부터 시작해보세요
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              내일 아침 9시, 첫 번째 Tech 캡슐이 당신의 메일함에 도착합니다.
+              오전 9시, 첫 번째 Tech 캡슐이 메일함에 도착할 거예요.
             </p>
             <a
               href="/"
@@ -177,7 +177,7 @@ export default function AboutPage() {
               © 2025 DailyDevQ. All rights reserved.
             </p>
             <p className="text-xs text-gray-500">
-              매일 아침 9시, 기술 면접 준비를 위한 캡슐
+              매일 아침 9시, 개발자를 위한 Tech 캡슐
             </p>
           </div>
         </footer>
