@@ -8,6 +8,13 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.jsdelivr.net',
+        pathname: '/gh/devicons/devicon@latest/**',
+      },
+    ],
   },
   // Docker 컨테이너 환경을 위한 설정
   output: 'standalone',

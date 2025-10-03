@@ -1,37 +1,40 @@
 "use client"
 
+import Image from "next/image"
+
 export function DemoVideoSection() {
   const row1 = [
-    { name: "JavaScript", icon: "⚡" },
-    { name: "Python", icon: "🐍" },
-    { name: "TypeScript", icon: "💙" },
-    { name: "Go", icon: "🔷" },
-    { name: "Rust", icon: "🦀" },
-    { name: "Java", icon: "☕" },
-    { name: "Kotlin", icon: "🟣" },
-    { name: "Swift", icon: "🍎" },
+    { name: "JavaScript", logo: "javascript" },
+    { name: "Python", logo: "python" },
+    { name: "TypeScript", logo: "typescript" },
+    { name: "Go", logo: "go" },
+    { name: "Rust", logo: "rust" },
+    { name: "Java", logo: "java" },
+    { name: "Kotlin", logo: "kotlin" },
+    { name: "Swift", logo: "swift" },
   ]
 
   const row2 = [
-    { name: "AWS", icon: "☁️" },
-    { name: "Google Cloud", icon: "🌥️" },
-    { name: "Azure", icon: "🔵" },
-    { name: "Docker", icon: "🐳" },
-    { name: "Kubernetes", icon: "⚓" },
-    { name: "Terraform", icon: "🔧" },
-    { name: "GitHub Actions", icon: "🔄" },
-    { name: "Jenkins", icon: "🔨" },
+    { name: "AWS", logo: "amazonwebservices" },
+    { name: "Google Cloud", logo: "googlecloud" },
+    { name: "Azure", logo: "azure" },
+    { name: "Docker", logo: "docker" },
+    { name: "Kubernetes", logo: "kubernetes" },
+    { name: "Ansible", logo: "ansible" },
+    { name: "Terraform", logo: "terraform" },
+    { name: "GitHub Actions", logo: "githubactions" },
+    { name: "Jenkins", logo: "jenkins" },
   ]
 
   const row3 = [
-    { name: "PostgreSQL", icon: "🐘" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Redis", icon: "🔴" },
-    { name: "MySQL", icon: "🐬" },
-    { name: "React", icon: "⚛️" },
-    { name: "Next.js", icon: "▲" },
-    { name: "Node.js", icon: "💚" },
-    { name: "GraphQL", icon: "💗" },
+    { name: "PostgreSQL", logo: "postgresql" },
+    { name: "MongoDB", logo: "mongodb" },
+    { name: "Redis", logo: "redis" },
+    { name: "MySQL", logo: "mysql" },
+    { name: "React", logo: "react" },
+    { name: "Next.js", logo: "nextjs" },
+    { name: "Node.js", logo: "nodejs" },
+    { name: "GraphQL", logo: "graphql" },
   ]
 
   return (
@@ -54,39 +57,60 @@ export function DemoVideoSection() {
 
         {/* Row 1 - Normal speed */}
         <div className="flex gap-6 animate-scroll">
-          {[...row1, ...row1].map((logo, idx) => (
+          {[...row1, ...row1].map((tech, idx) => (
             <div
               key={`row1-${idx}`}
               className="flex-shrink-0 flex items-center gap-3 liquid-glass rounded-2xl px-6 py-4 min-w-[160px]"
             >
-              <span className="text-3xl">{logo.icon}</span>
-              <span className="text-white font-medium">{logo.name}</span>
+              <Image
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.logo}/${tech.logo}-original.svg`}
+                alt={tech.name}
+                width={32}
+                height={32}
+                className="w-8 h-8"
+                unoptimized
+              />
+              <span className="text-white font-medium">{tech.name}</span>
             </div>
           ))}
         </div>
 
         {/* Row 2 - Slower speed (reverse direction) */}
         <div className="flex gap-6 animate-scroll-reverse">
-          {[...row2, ...row2].map((logo, idx) => (
+          {[...row2, ...row2].map((tech, idx) => (
             <div
               key={`row2-${idx}`}
               className="flex-shrink-0 flex items-center gap-3 liquid-glass rounded-2xl px-6 py-4 min-w-[160px]"
             >
-              <span className="text-3xl">{logo.icon}</span>
-              <span className="text-white font-medium">{logo.name}</span>
+              <Image
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.logo}/${tech.logo}-original.svg`}
+                alt={tech.name}
+                width={32}
+                height={32}
+                className="w-8 h-8"
+                unoptimized
+              />
+              <span className="text-white font-medium">{tech.name}</span>
             </div>
           ))}
         </div>
 
         {/* Row 3 - Fast speed */}
         <div className="flex gap-6 animate-scroll-fast">
-          {[...row3, ...row3].map((logo, idx) => (
+          {[...row3, ...row3].map((tech, idx) => (
             <div
               key={`row3-${idx}`}
               className="flex-shrink-0 flex items-center gap-3 liquid-glass rounded-2xl px-6 py-4 min-w-[160px]"
             >
-              <span className="text-3xl">{logo.icon}</span>
-              <span className="text-white font-medium">{logo.name}</span>
+              <Image
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.logo}/${tech.logo}-original.svg`}
+                alt={tech.name}
+                width={32}
+                height={32}
+                className="w-8 h-8"
+                unoptimized
+              />
+              <span className="text-white font-medium">{tech.name}</span>
             </div>
           ))}
         </div>
