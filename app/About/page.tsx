@@ -147,7 +147,7 @@ export default function AboutPage() {
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     여러분들과 함께 성장하길 바라는 마음으로
-                    DailyDevQ는 영구 무료로 운영됩니다.
+                    DailyDevQ는 무료로 운영됩니다.
                   </p>
                 </div>
               </div>
