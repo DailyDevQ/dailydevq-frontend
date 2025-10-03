@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"], display: "swap" })
 export const metadata: Metadata = {
   title: "DailyDevQ | 매일 오전 7시, 실무 핵심만 전합니다",
   description:
-    "매일 오전 7시, 기술로 일하는 사람들을 위한 Tech Letter. CS 기초부터 DevOps, Cloud, AI/ML까지 실무 노하우를 5분 안에 배우세요.",
+    "매일 오전 7시, 실무 핵심만 전합니다. Tech Letter.",
   keywords: ["기술 뉴스레터", "개발자", "프로그래밍", "DevOps", "Cloud", "AI", "무료 구독"],
   authors: [{ name: "DailyDevQ" }],
   creator: "DailyDevQ",
@@ -20,22 +20,22 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     url: "https://dailydevq.com",
     title: "DailyDevQ | 매일 오전 7시, 실무 핵심만 전합니다",
-    description: "매일 오전 7시, 기술로 일하는 사람들을 위한 Tech Letter. CS 기초부터 DevOps, Cloud, AI/ML까지 실무 노하우를 5분 안에 배우세요.",
+    description: "매일 오전 7시, 실무 핵심만 전합니다. Tech Letter.",
     siteName: "DailyDevQ",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "DailyDevQ - 매일 오전 7시, 기술로 일하는 사람들을 위한 Tech Letter",
+        url: "/dedeq_wordmark.svg",
+        width: 1600,
+        height: 600,
+        alt: "데데큐 - 매일 오전 7시, 실무 핵심만 전합니다. Tech Letter",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "DailyDevQ | 매일 오전 7시, 실무 핵심만 전합니다",
-    description: "매일 오전 7시, 기술로 일하는 사람들을 위한 Tech Letter",
-    images: ["/og-image.png"],
+    description: "매일 오전 7시, 실무 핵심만 전합니다. Tech Letter",
+    images: ["/dedeq_wordmark.svg"],
   },
 }
 
@@ -57,25 +57,9 @@ export default function RootLayout({
           fetchPriority="high"
         />
 
-        {/* Dynamic Favicon Script */}
-        <Script id="dynamic-favicon" strategy="beforeInteractive">
-          {`
-            function updateFavicon() {
-              const darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              const faviconHref = darkMode ? '/icons/skitbit-white.svg' : '/icons/favicon-dark.svg';
-              let link = document.querySelector("link[rel~='icon']");
-              if (!link) {
-                link = document.createElement('link');
-                link.rel = 'icon';
-                document.getElementsByTagName('head')[0].appendChild(link);
-              }
-              link.href = faviconHref;
-            }
-            updateFavicon();
-            // Listen for changes in theme
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
-          `}
-        </Script>
+        {/* Favicon */}
+        <link rel="icon" href="/icons/dailydevq.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icons/dailydevq.svg" />
 
         {/* Google Tag Manager (deferred) */}
         <Script id="gtm-script" strategy="lazyOnload">

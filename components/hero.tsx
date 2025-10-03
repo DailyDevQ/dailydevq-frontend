@@ -21,7 +21,7 @@ export function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center py-20 sm:py-32">
           <div className="mb-6 flex items-center gap-2">
-            <Image src="/icons/dailydevq-white.svg" alt="DailyDevQ logo" width={32} height={32} className="h-8 w-8" />
+            <Image src="/icons/dailydevq.svg" alt="DailyDevQ logo" width={32} height={32} className="h-8 w-8" />
             <p className="text-sm uppercase tracking-[0.25em] text-lime-300/80">DAILYDEVQ</p>
           </div>
           <h1 className="mt-4 text-center text-4xl font-extrabold tracking-tight sm:text-5xl md:text-7xl max-w-5xl">

@@ -24,7 +24,7 @@ export function SiteHeader() {
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-1.5">
             <Image
-              src="/icons/dailydevq-white.svg"
+              src="/icons/dailydevq.svg"
               alt="DailyDevQ logo"
               width={20}
               height={20}
@@ -78,7 +78,7 @@ export function SiteHeader() {
                 {/* Brand Header */}
                 <div className="flex items-center gap-1.5 px-4 py-4 border-b border-gray-800">
                   <Image
-                    src="/icons/dailydevq-white.svg"
+                    src="/icons/dailydevq.svg"
                     alt="DailyDevQ logo"
                     width={24}
                     height={24}
