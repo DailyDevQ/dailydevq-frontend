@@ -338,6 +338,21 @@ a[href*="v0.dev"] *,
   animation: scroll-logos 30s linear infinite;
 }
 
+/* 모바일에서 더 빠르게 */
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll-logos 25s linear infinite;
+  }
+
+  .animate-scroll-reverse {
+    animation: scroll-logos-reverse 30s linear infinite;
+  }
+
+  .animate-scroll-fast {
+    animation: scroll-logos 20s linear infinite;
+  }
+}
+
 .animate-scroll:hover,
 .animate-scroll-reverse:hover,
 .animate-scroll-fast:hover {
