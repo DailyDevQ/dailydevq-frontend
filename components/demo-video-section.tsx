@@ -4,43 +4,48 @@ import Image from "next/image"
 
 export function DemoVideoSection() {
   const row1 = [
-    { name: "JavaScript", logo: "javascript" },
-    { name: "Python", logo: "python" },
-    { name: "TypeScript", logo: "typescript" },
-    { name: "Go", logo: "go" },
-    { name: "Rust", logo: "rust" },
-    { name: "Java", logo: "java" },
-    { name: "Kotlin", logo: "kotlin" },
-    { name: "Swift", logo: "swift" },
+    { name: "JavaScript", logo: "javascript", suffix: "original" },
+    { name: "Python", logo: "python", suffix: "original" },
+    { name: "TypeScript", logo: "typescript", suffix: "original" },
+    { name: "Go", logo: "go", suffix: "original" },
+    { name: "Rust", logo: "rust", suffix: "original" },
+    { name: "Java", logo: "java", suffix: "original" },
+    { name: "C++", logo: "cplusplus", suffix: "original" },
+    { name: "C#", logo: "csharp", suffix: "original" },
+    { name: "Kotlin", logo: "kotlin", suffix: "original" },
+    { name: "Swift", logo: "swift", suffix: "original" },
+    { name: "PHP", logo: "php", suffix: "original" },
+    { name: "Ruby", logo: "ruby", suffix: "original" },
   ]
 
   const row2 = [
-    { name: "AWS", logo: "amazonwebservices" },
-    { name: "Google Cloud", logo: "googlecloud" },
-    { name: "Azure", logo: "azure" },
-    { name: "Docker", logo: "docker" },
-    { name: "Kubernetes", logo: "kubernetes" },
-    { name: "Ansible", logo: "ansible" },
-    { name: "Terraform", logo: "terraform" },
-    { name: "GitHub Actions", logo: "githubactions" },
-    { name: "Jenkins", logo: "jenkins" },
+    { name: "AWS", logo: "amazonwebservices", suffix: "plain-wordmark" },
+    { name: "Google Cloud", logo: "googlecloud", suffix: "original" },
+    { name: "Azure", logo: "azure", suffix: "original" },
+    { name: "Docker", logo: "docker", suffix: "original" },
+    { name: "Kubernetes", logo: "kubernetes", suffix: "original" },
+    { name: "Ansible", logo: "ansible", suffix: "original" },
+    { name: "Terraform", logo: "terraform", suffix: "original" },
+    { name: "GitHub Actions", logo: "githubactions", suffix: "original" },
+    { name: "Jenkins", logo: "jenkins", suffix: "original" },
   ]
 
   const row3 = [
-    { name: "PostgreSQL", logo: "postgresql" },
-    { name: "MongoDB", logo: "mongodb" },
-    { name: "Redis", logo: "redis" },
-    { name: "MySQL", logo: "mysql" },
-    { name: "React", logo: "react" },
-    { name: "Next.js", logo: "nextjs" },
-    { name: "Node.js", logo: "nodejs" },
-    { name: "GraphQL", logo: "graphql" },
+    { name: "PostgreSQL", logo: "postgresql", suffix: "original" },
+    { name: "MongoDB", logo: "mongodb", suffix: "original" },
+    { name: "Redis", logo: "redis", suffix: "original" },
+    { name: "MySQL", logo: "mysql", suffix: "original" },
+    { name: "React", logo: "react", suffix: "original" },
+    { name: "Next.js", logo: "nextjs", suffix: "original" },
+    { name: "Node.js", logo: "nodejs", suffix: "original" },
+    { name: "Vue.js", logo: "vuejs", suffix: "original" },
+    { name: "Django", logo: "django", suffix: "plain" },
+    { name: "FastAPI", logo: "fastapi", suffix: "original" },
   ]
 
   return (
     <div className="container mx-auto px-4 py-12 sm:py-16">
       <div className="text-center mb-8">
-        <p className="text-lime-300 text-sm uppercase tracking-widest mb-3">다루는 기술</p>
         <h3 className="text-2xl font-bold leading-tight text-white sm:text-3xl mb-2">
           모든 기술 스택을 한 곳에서
         </h3>
@@ -63,7 +68,7 @@ export function DemoVideoSection() {
               className="flex-shrink-0 flex items-center gap-3 liquid-glass rounded-2xl px-6 py-4 min-w-[160px]"
             >
               <Image
-                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.logo}/${tech.logo}-original.svg`}
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.logo}/${tech.logo}-${tech.suffix}.svg`}
                 alt={tech.name}
                 width={32}
                 height={32}
@@ -83,7 +88,7 @@ export function DemoVideoSection() {
               className="flex-shrink-0 flex items-center gap-3 liquid-glass rounded-2xl px-6 py-4 min-w-[160px]"
             >
               <Image
-                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.logo}/${tech.logo}-original.svg`}
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.logo}/${tech.logo}-${tech.suffix}.svg`}
                 alt={tech.name}
                 width={32}
                 height={32}
@@ -103,7 +108,7 @@ export function DemoVideoSection() {
               className="flex-shrink-0 flex items-center gap-3 liquid-glass rounded-2xl px-6 py-4 min-w-[160px]"
             >
               <Image
-                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.logo}/${tech.logo}-original.svg`}
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${tech.logo}/${tech.logo}-${tech.suffix}.svg`}
                 alt={tech.name}
                 width={32}
                 height={32}

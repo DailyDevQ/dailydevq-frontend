@@ -3,10 +3,14 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { SubscribeDialog } from "@/components/subscribe-dialog"
 import Image from "next/image"
 import { Menu, Briefcase, Tag, HelpCircle, FileText, Info } from "lucide-react"
+import { useState } from "react"
 
 export function SiteHeader() {
+  const [dialogOpen, setDialogOpen] = useState(false)
+
   const links = [
     { href: "/", label: "Home", icon: Briefcase },
     { href: "About", label: "About", icon: Info },
@@ -45,12 +49,12 @@ export function SiteHeader() {
           {/* Desktop CTA */}
           <div className="hidden md:flex">
             <Button
-              asChild
+              onClick={() => setDialogOpen(true)}
               className="bg-lime-400 text-black font-medium rounded-lg px-6 py-2.5
                          hover:bg-lime-300 hover:shadow-md hover:scale-[1.02]
                          transition-all"
             >
-              <Link href="#contact">회원가입</Link>
+              구독하기
             </Button>
           </div>
 
@@ -102,12 +106,12 @@ export function SiteHeader() {
                 {/* CTA Button at Bottom */}
                 <div className="mt-auto border-t border-gray-800 p-4">
                   <Button
-                    asChild
+                    onClick={() => setDialogOpen(true)}
                     className="w-full bg-lime-400 text-black font-medium rounded-lg px-6 py-2.5
                                hover:bg-lime-300 hover:shadow-md hover:scale-[1.02]
                                transition-all"
                   >
-                    <Link href="https://wa.link/65mf3i">Get a Quote</Link>
+                    구독하기
                   </Button>
                 </div>
               </SheetContent>
@@ -115,6 +119,9 @@ export function SiteHeader() {
           </div>
         </div>
       </div>
+
+      {/* 구독 다이얼로그 */}
+      <SubscribeDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </header>
   )
 }

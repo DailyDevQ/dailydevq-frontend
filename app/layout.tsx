@@ -8,7 +8,7 @@ import Plasma from "@/components/plasma"
 const inter = Inter({ subsets: ["latin"], display: "swap" })
 
 export const metadata: Metadata = {
-  title: "DailyDevQ | 5분 테크레터",
+  title: "DailyDevQ | Tech Letter",
   description:
     "From product launches to full-scale campaigns, Skitbit delivers 3D animation that's fast, consistent, and built to wow your audience.",
   generator: "v0.app",
