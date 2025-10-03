@@ -8,10 +8,35 @@ import Plasma from "@/components/plasma"
 const inter = Inter({ subsets: ["latin"], display: "swap" })
 
 export const metadata: Metadata = {
-  title: "DailyDevQ | Tech Letter",
+  title: "DailyDevQ | 매일 오전 7시, 실무 핵심만 전합니다",
   description:
-    "From product launches to full-scale campaigns, Skitbit delivers 3D animation that's fast, consistent, and built to wow your audience.",
-  generator: "v0.app",
+    "매일 오전 7시, 기술로 일하는 사람들을 위한 Tech Letter. CS 기초부터 DevOps, Cloud, AI/ML까지 실무 노하우를 5분 안에 배우세요.",
+  keywords: ["기술 뉴스레터", "개발자", "프로그래밍", "DevOps", "Cloud", "AI", "무료 구독"],
+  authors: [{ name: "DailyDevQ" }],
+  creator: "DailyDevQ",
+  publisher: "DailyDevQ",
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: "https://dailydevq.com",
+    title: "DailyDevQ | 매일 오전 7시, 실무 핵심만 전합니다",
+    description: "매일 오전 7시, 기술로 일하는 사람들을 위한 Tech Letter. CS 기초부터 DevOps, Cloud, AI/ML까지 실무 노하우를 5분 안에 배우세요.",
+    siteName: "DailyDevQ",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DailyDevQ - 매일 오전 7시, 기술로 일하는 사람들을 위한 Tech Letter",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DailyDevQ | 매일 오전 7시, 실무 핵심만 전합니다",
+    description: "매일 오전 7시, 기술로 일하는 사람들을 위한 Tech Letter",
+    images: ["/og-image.png"],
+  },
 }
 
 export default function RootLayout({
