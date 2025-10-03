@@ -15,19 +15,20 @@ export const metadata: Metadata = {
   authors: [{ name: "DailyDevQ" }],
   creator: "DailyDevQ",
   publisher: "DailyDevQ",
+  themeColor: "#0B1020",
   openGraph: {
     type: "website",
     locale: "ko_KR",
     url: "https://dailydevq.com",
+    siteName: "DailyDevQ",
     title: "DailyDevQ | 매일 오전 7시, 실무 핵심만 전합니다",
     description: "매일 오전 7시, 실무 핵심만 전합니다. Tech Letter.",
-    siteName: "DailyDevQ",
     images: [
       {
-        url: "/dedeq_wordmark.svg",
+        url: "https://dailydevq.com/dedeq_wordmark.svg",
         width: 1600,
         height: 600,
-        alt: "데데큐 - 매일 오전 7시, 실무 핵심만 전합니다. Tech Letter",
+        alt: "DailyDevQ wordmark",
       },
     ],
   },
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DailyDevQ | 매일 오전 7시, 실무 핵심만 전합니다",
     description: "매일 오전 7시, 실무 핵심만 전합니다. Tech Letter",
-    images: ["/dedeq_wordmark.svg"],
+    images: ["https://dailydevq.com/dedeq_wordmark.svg"],
   },
 }
 
