@@ -85,9 +85,8 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body>
-        {/* 데스크탑: Plasma 애니메이션, 모바일: 정적 그라데이션 */}
-        <div className="fixed inset-0 z-0 bg-gray-900">
+      <body className="min-h-screen overflow-x-hidden">
+        <div className="site-bg" aria-hidden="true">
           <div className="hidden md:block w-full h-full">
             <Plasma
               color="#000000"
@@ -98,9 +97,8 @@ export default function RootLayout({
               mouseInteractive={true}
             />
           </div>
-          <div className="block md:hidden w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
         </div>
-        <div className="relative z-10">{children}</div>
+        {children}
       </body>
     </html>
   )

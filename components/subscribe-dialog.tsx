@@ -77,11 +77,21 @@ export function SubscribeDialog({ open, onOpenChange, initialEmail = "" }: Subsc
     setIsLoading(true)
 
     try {
-      // TODO: 백엔드 API 연동
-      console.log("Email subscription:", email)
+      // 백엔드 API 호출
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8001'
+      const response = await fetch(`${apiUrl}/api/v1/subscribe/email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
 
-      // 임시: 성공 처리
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.detail || '구독 처리 중 오류가 발생했습니다.')
+      }
 
       // 폭죽 이펙트 실행
       celebrateSubscription()
@@ -91,7 +101,7 @@ export function SubscribeDialog({ open, onOpenChange, initialEmail = "" }: Subsc
       setEmail("")
     } catch (error) {
       console.error("Subscription error:", error)
-      alert("구독 중 오류가 발생했습니다. 다시 시도해주세요.")
+      alert(error instanceof Error ? error.message : "구독 중 오류가 발생했습니다. 다시 시도해주세요.")
     } finally {
       setIsLoading(false)
     }
@@ -101,15 +111,31 @@ export function SubscribeDialog({ open, onOpenChange, initialEmail = "" }: Subsc
     setIsLoading(true)
 
     try {
-      // TODO: 구글 OAuth 연동
-      console.log("Google OAuth login")
+      const clientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
 
-      // 임시: 구글 로그인 URL로 리다이렉트 (백엔드 연동 전)
-      alert("구글 로그인 기능은 곧 제공될 예정입니다.")
+      if (!clientId) {
+        alert("Google 로그인이 설정되지 않았습니다.")
+        setIsLoading(false)
+        return
+      }
+
+      const redirectUri = `${window.location.origin}/auth/google/callback`
+      const scope = "email profile"
+
+      // Google OAuth URL 생성
+      const googleAuthUrl = new URL("https://accounts.google.com/o/oauth2/v2/auth")
+      googleAuthUrl.searchParams.set("client_id", clientId)
+      googleAuthUrl.searchParams.set("redirect_uri", redirectUri)
+      googleAuthUrl.searchParams.set("response_type", "code")
+      googleAuthUrl.searchParams.set("scope", scope)
+      googleAuthUrl.searchParams.set("access_type", "offline")
+      googleAuthUrl.searchParams.set("prompt", "consent")
+
+      // Google 로그인 페이지로 리다이렉트
+      window.location.href = googleAuthUrl.toString()
     } catch (error) {
       console.error("Google login error:", error)
       alert("로그인 중 오류가 발생했습니다. 다시 시도해주세요.")
-    } finally {
       setIsLoading(false)
     }
   }

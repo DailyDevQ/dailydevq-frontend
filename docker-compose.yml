@@ -16,7 +16,7 @@ services:
       NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
 
       # 백엔드 API 연결 (별도 레포에서 실행 중인 백엔드)
-      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8000}
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8001}
 
       # 인증 설정
       NEXTAUTH_URL: ${NEXTAUTH_URL:-http://localhost:3000}
@@ -43,4 +43,4 @@ services:
 networks:
   dailydevq-network:
     name: dailydevq-shared
-    driver: bridge
+    external: true
