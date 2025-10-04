@@ -62,6 +62,9 @@ export default function RootLayout({
         <link rel="icon" href="/icons/dailydevq.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icons/dailydevq.svg" />
 
+        {/* Confetti */}
+        <Script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js" strategy="beforeInteractive" />
+
         {/* Google Tag Manager (deferred) */}
         <Script id="gtm-script" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -83,15 +86,19 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
+        {/* 데스크탑: Plasma 애니메이션, 모바일: 정적 그라데이션 */}
         <div className="fixed inset-0 z-0 bg-gray-900">
-          <Plasma
-            color="#000000"
-            speed={0.8}
-            direction="forward"
-            scale={1.5}
-            opacity={0.4}
-            mouseInteractive={true}
-          />
+          <div className="hidden md:block w-full h-full">
+            <Plasma
+              color="#000000"
+              speed={0.8}
+              direction="forward"
+              scale={1.5}
+              opacity={0.4}
+              mouseInteractive={true}
+            />
+          </div>
+          <div className="block md:hidden w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-black"></div>
         </div>
         <div className="relative z-10">{children}</div>
       </body>

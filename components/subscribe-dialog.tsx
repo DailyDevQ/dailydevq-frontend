@@ -28,6 +28,50 @@ export function SubscribeDialog({ open, onOpenChange, initialEmail = "" }: Subsc
     }
   }, [initialEmail])
 
+  const celebrateSubscription = () => {
+    // @ts-ignore
+    if (typeof window !== 'undefined' && window.confetti) {
+      const duration = 3000
+      const end = Date.now() + duration
+
+      const colors = ['#84CC16', '#22D3EE', '#3B82F6']
+
+      ;(function frame() {
+        // @ts-ignore
+        window.confetti({
+          particleCount: 3,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors
+        })
+        // @ts-ignore
+        window.confetti({
+          particleCount: 3,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors
+        })
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame)
+        }
+      })()
+
+      // 중앙에서 큰 폭죽
+      setTimeout(() => {
+        // @ts-ignore
+        window.confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: colors
+        })
+      }, 200)
+    }
+  }
+
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
@@ -38,7 +82,11 @@ export function SubscribeDialog({ open, onOpenChange, initialEmail = "" }: Subsc
 
       // 임시: 성공 처리
       await new Promise(resolve => setTimeout(resolve, 1000))
-      alert("구독이 완료되었습니다! 평일 오전 7시에 첫 뉴스레터를 받아보실 수 있습니다.")
+
+      // 폭죽 이펙트 실행
+      celebrateSubscription()
+
+      alert("🎉 구독이 완료되었습니다! 평일 오전 7시에 첫 뉴스레터를 받아보실 수 있습니다.")
       onOpenChange(false)
       setEmail("")
     } catch (error) {

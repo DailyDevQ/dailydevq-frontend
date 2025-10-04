@@ -284,13 +284,21 @@ a[href*="v0.dev"] *,
     transparent 70%,
     transparent 100%
   );
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   animation: rotate-border 4s linear infinite;
   pointer-events: none;
+}
+
+/* 모바일에서 회전 애니메이션 비활성화 */
+@media (max-width: 768px) {
+  .rotating-border {
+    animation: none;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.5) 100%);
+  }
 }
 
 @keyframes rotate-border {
